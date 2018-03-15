@@ -1,4 +1,4 @@
-# Dimitris Raptis
+# Personal website 🤘
 
 Graphic designer
 UI/UX junior designer
