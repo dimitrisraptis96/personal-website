@@ -6,8 +6,6 @@ I design and build user interfaces!
   <img src="assets/me.png" width="70%">
 </p>
 
-&nbsp;
-
 ## Responsibilities
 
 - User Interface designer :art:
