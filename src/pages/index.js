@@ -38,6 +38,7 @@ const Typography = styled.p`
 `;
 
 const Bold = styled.p`
+  @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 	font-family: 'Abril Fatface', cursive;
   font-size: 5em;
   /* font-weight: bold; */
