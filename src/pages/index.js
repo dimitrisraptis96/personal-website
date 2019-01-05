@@ -49,7 +49,8 @@ const IconWrapper = styled.div`
   flex-direction: column;
   align-self: flex-end;
   justify-self: flex-end;
-  padding-top: 10%;
+  padding-top: 8%;
+  padding-bottom: 2%;
   
   > svg {
     margin: 0.5em;
@@ -81,7 +82,7 @@ const Green = styled.span`
 `;
 
 
-const Homepage = () => (
+const Homepage = ({data}) => (
   <Content>
     <Bold>
       Dimitris Raptis <Green>.</Green>
