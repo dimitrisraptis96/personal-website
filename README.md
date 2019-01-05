@@ -1,15 +1,13 @@
 # Personal Website :metal:
  
-I design and build user interfaces!
-
 <p align="center">
   <img src="assets/me.png" width="70%">
 </p>
 
-## Responsibilities
-
-- User Interface designer :art:
-- Front-end engineer :computer:
+## Tech Stack
+   - ReactJS
+   - Gatsby static sites generator
+   - Github Pages 
 
 &nbsp;
 
