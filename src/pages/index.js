@@ -57,6 +57,7 @@ const Header = styled.h2`
 const Image = styled(Img)`
   box-shadow: 0 8px 6px -6px black;
   border-radius: 1000px;
+  width: 10em;
 `;
 
 
@@ -71,34 +72,34 @@ const Bio = styled.div`
   justify-content: center;
 `;
 
-const Homepage = ({data}) => (
-  <Content>
-    <Header>
-      Dimitris Raptis <Green>.</Green>
-    </Header>
-
-    <Image fixed={data.file.childImageSharp.fixed} />
-
-    <Paragraph >
-      I design and build user interfaces
-    </Paragraph>
-
-    <Icons/>
-
+const Homepage = ({data}) => {
+  return(
+    <Content>
+      <Header>
+        Dimitris Raptis <Green>.</Green>
+      </Header>
   
-  </Content>
-)
+      <Image fluid={data.me.childImageSharp.fluid} />
+  
+      <Paragraph >
+        I design and build user interfaces
+      </Paragraph>
+  
+      <Icons/>
+  
+    
+    </Content>
+  );
+}
 
 export default Homepage;
 
 export const query = graphql`
   query {
-    file (relativePath: { eq: "me.jpeg" }) {
+    me: file(relativePath: {eq: "me.jpg"}) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
