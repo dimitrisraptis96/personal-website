@@ -79,7 +79,7 @@ const Homepage = ({data}) => {
         Dimitris Raptis <Green>.</Green>
       </Header>
   
-      <Image fluid={data.me.childImageSharp.fluid} />
+      <Image fixed={data.me.childImageSharp.fixed} />
   
       <Paragraph >
         I design and build user interfaces
@@ -98,8 +98,8 @@ export const query = graphql`
   query {
     me: file(relativePath: {eq: "me.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 150, height: 150) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
