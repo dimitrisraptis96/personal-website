@@ -57,7 +57,7 @@ const Header = styled.h2`
 const Image = styled(Img)`
   box-shadow: 0 8px 6px -6px black;
   border-radius: 1000px;
-  width: 10em;
+  width: 150px;
 `;
 
 
