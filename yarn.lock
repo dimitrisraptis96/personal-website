@@ -4410,6 +4410,12 @@ gatsby-plugin-sharp@^2.0.17:
     sharp "^0.21.0"
     svgo "^0.7.2"
 
+gatsby-plugin-styled-components@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.4.tgz#f34546bd8b80b87f4b5acddfcced4a900da8482d"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-typography@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-2.2.5.tgz#a73f1bc3149fb555691baacced5fae989c1427ee"
