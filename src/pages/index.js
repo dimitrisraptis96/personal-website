@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import styled from 'styled-components';
 
 import { GitHub } from 'react-feather';
@@ -28,6 +30,8 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-color: #ececec;
 `;
 
 const Typography = styled.p`
@@ -48,21 +52,23 @@ const Bold = styled.p`
 const IconWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
-  justify-self: flex-end;
-  padding-top: 8%;
-  padding-bottom: 2%;
+  /* align-self: flex-end;
+  justify-self: flex-end; */
+  padding: 1em 2em;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
   
   > svg {
     margin: 0.5em;
   }
 `;
 
-const Image = styled.div`
+const Image = styled(Img)`
   box-shadow: 0 8px 6px -6px black;
-  border-radius: 8px;
-  max-height: 20px;
-  background-image: url('(${props => props.url}') no-repeat;
+  border-radius: 1000px;
 `;
 
 const Anchor = styled.a`
@@ -82,6 +88,12 @@ const Green = styled.span`
   color: ${green};
 `;
 
+const Bio = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Homepage = ({data}) => (
   <Content>
@@ -89,10 +101,11 @@ const Homepage = ({data}) => (
       Dimitris Raptis <Green>.</Green>
     </Bold>
 
+    <Image fixed={data.file.childImageSharp.fixed} />
+
     <Typography >
       I design and build user interfaces
     </Typography>
-
 
     <IconWrapper>
       <Anchor href='https://github.com/dimitrisraptis96/'>
@@ -116,5 +129,18 @@ const Homepage = ({data}) => (
   </Content>
 )
 
-
 export default Homepage;
+
+export const query = graphql`
+  query {
+    file (relativePath: { eq: "me.jpeg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 125, height: 125) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;
