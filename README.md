@@ -5,9 +5,9 @@
 </p>
 
 ## Tech Stack
-   - ReactJS
-   - Gatsby static sites generator
-   - Github Pages 
+   - ReactJS 
+   - Gatsby
+   - Netlify
 
 &nbsp;
 
