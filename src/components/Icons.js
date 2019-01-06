@@ -49,11 +49,11 @@ const Icons = ({}) => {
         <Twitter color={black} size={24}/>
       </Anchor>
 
-      <Anchor href='https://www.instagram.com/glitch_aholic/'>
+      <Anchor href='https://www.linkedin.com/in/dimitris-raptis-a7088b132/'>
         <Linkedin color={black} size={24}/>
       </Anchor>
 
-      <Anchor href='https://www.linkedin.com/in/dimitris-raptis-a7088b132/'>
+      <Anchor href='https://www.instagram.com/dim_raptis/'>
         <Instagram color={black} size={24}/>
       </Anchor>
     </Wrapper>    
