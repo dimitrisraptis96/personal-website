@@ -4,14 +4,14 @@
   <img src="assets/me.png" width="70%">
 </p>
 
-## Tech Stack
+## :computer: Tech Stack
    - ReactJS 
    - Gatsby
    - Netlify
 
 &nbsp;
 
-## License
+## :page_with_curl: License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
 
