@@ -1,19 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import styled from 'styled-components';
-import Emoji from 'react-emojione';
+import React from "react";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import styled from "styled-components";
+import Emoji from "react-emojione";
 
-import Icons from '../components/Icons';
+import Icons from "../components/Icons";
 
-import {
-  darkgreen,
-  green,
-  black,
-  gray,
-  white
-} from '../utils/colors';
-
+import { darkgreen, green, black, gray, white } from "../utils/colors";
 
 const Content = styled.div`
   background-color: #f5f5f5;
@@ -36,23 +29,37 @@ const Content = styled.div`
   background-color: #ececec;
 `;
 
+const Header = styled.h2`
+  font-family: "Poppins", sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: left;
+  color: ${black};
+  margin-bottom: 0.75rem;
+`;
+
+const JobTitle = styled.p`
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  font-weight: regular;
+  color: ${gray};
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
 const Paragraph = styled.p`
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5em;
   font-weight: regular;
   color: ${black};
-  /* text-align: center; */
   width: 100%;
-
-  /* padding: 2em; */
-`;
-
-const Header = styled.h2`
-  font-family: 'Poppins', sans-serif;
-  font-size: 3em;
-  font-weight: bold;
-  text-align: center;
-  color: ${black};
+  margin-bottom: 1.5rem;
 `;
 
 const Underline = styled.span`
@@ -66,9 +73,10 @@ const Underline = styled.span`
 const Image = styled(Img)`
   box-shadow: 0 23px 40px rgba(0, 0, 0, 0.2);
   border-radius: 1000px;
-  width: 150px;
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 1em;
 `;
-
 
 const Green = styled.span`
   color: ${green};
@@ -81,37 +89,34 @@ const Bio = styled.div`
   justify-content: center;
 `;
 
-const Homepage = ({data}) => {
-  return(
+const Homepage = ({ data }) => {
+  return (
     <Content>
       <Header>
-        <Underline>
-          Dimitris Raptis
-        </Underline>
+        <Underline>Dimitris Raptis</Underline>
       </Header>
-  
-  
-      <Paragraph >
-        I design and build user interfaces
-        <Emoji> 🤟 </Emoji>
 
+      <JobTitle>
+        <Image fixed={data.me.childImageSharp.fixed} />
+        Frontend engineer @loceye.io
+      </JobTitle>
+
+      <Paragraph>
+        <Emoji>I design and build user interfaces 🤟 </Emoji>
       </Paragraph>
-  
-      <Image fixed={data.me.childImageSharp.fixed} />
-      <Icons/>
-  
-    
+
+      <Icons />
     </Content>
   );
-}
+};
 
 export default Homepage;
 
 export const query = graphql`
   query {
-    me: file(relativePath: {eq: "me.jpg"}) {
+    me: file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
-        fixed(width: 100, height: 100) {
+        fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }
