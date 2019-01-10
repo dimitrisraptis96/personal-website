@@ -11,6 +11,14 @@
 
 &nbsp;
 
+## :clipboard: Todo List
+- [ ] Fix display name (SEO component and gatsby-config)
+- [ ] Connect gatsby-blog-starter
+- [ ] Try to add a CSS3 animated background 🌠
+- [ ] Change cringe image of this README.md
+
+&nbsp;
+
 ## :page_with_curl: License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
