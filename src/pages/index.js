@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from 'styled-components';
-import Emojify from 'react-emojione';
+import Emoji from 'react-emojione';
 
 import Icons from '../components/Icons';
 
@@ -93,6 +93,8 @@ const Homepage = ({data}) => {
   
       <Paragraph >
         I design and build user interfaces
+        <Emoji> 🤟 </Emoji>
+
       </Paragraph>
   
       <Image fixed={data.me.childImageSharp.fixed} />
