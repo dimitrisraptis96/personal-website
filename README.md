@@ -16,7 +16,9 @@
 - [ ] Connect gatsby-blog-starter
 - [ ] Try to add a CSS3 animated background 🌠
 - [ ] Change cringe image of this README.md
-
+- [ ] Refactor and componentize code
+- [ ] Add CTA link and create *My work* page
+ 
 &nbsp;
 
 ## :page_with_curl: License
