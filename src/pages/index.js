@@ -3,12 +3,19 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import Emoji from "react-emojione";
-
+import Button from '../components/button2';
 import Icons from "../components/Icons";
 
 import { darkgreen, green, black, gray, white } from "../utils/colors";
 
 import { Transition, animated } from "react-spring";
+
+const ButtonWrapper = styled(Button)`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10em;
+`;
 
 const Content = styled.div`
   background-color: #f5f5f5;
@@ -27,8 +34,6 @@ const Content = styled.div`
   flex-direction: column-reverse;
   justify-content: center;
   align-items: flex-start;
-
-  background-color: #ececec;
 `;
 
 const Header = styled.h2`
@@ -61,7 +66,7 @@ const Paragraph = styled.p`
   font-weight: regular;
   color: ${black};
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5rem;
 `;
 
 const Underline = styled.span`
@@ -133,18 +138,22 @@ class Homepage extends React.Component {
       )
     };
 
-    const offset = 0;
-    const interval = 800;
+    const button = {
+      key: 'btn',
+      content: ( <Button>My work</Button> )
+    }
 
-    this.t1 = setTimeout(() => this.setState({ items: [quote] }), offset);
-    this.t2 = setTimeout(
-      () => this.setState({ items: [quote, bio] }),
-      offset + 2 * interval
-    );
-    this.t3 = setTimeout(
-      () => this.setState({ items: [quote, bio, name] }),
-      offset + 3 * interval
-    );
+    const offset = 300;
+    const interval = 700;
+
+    const items = [button, quote, bio, name];
+
+    items.map((item, index) => {
+      setTimeout(
+        () => this.setState({ items: [...this.state.items, item] }),
+          offset + (index+1) * interval
+      )
+    });
   }
 
   render() {
@@ -161,6 +170,7 @@ class Homepage extends React.Component {
         >
           {item => props => <div style={props}>{item.content}</div>}
         </Transition>
+        {/* <ButtonWrapper>See my work</ButtonWrapper> */}
         <Icons />
       </Content>
     );

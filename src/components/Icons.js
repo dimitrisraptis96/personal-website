@@ -9,8 +9,8 @@ import {
 } from 'react-feather';
 
 import {
-  black,
   green,
+  gray,
 } from '../utils/colors';
 
 const Wrapper = styled.div`
@@ -42,19 +42,19 @@ const Icons = ({}) => {
   return (
     <Wrapper>
       <Anchor href='https://github.com/dimitrisraptis96/'>
-        <GitHub color={black} size={24}/>
+        <GitHub color={gray} size={24}/>
       </Anchor>
 
       <Anchor href='https://twitter.com/d__raptis'>
-        <Twitter color={black} size={24}/>
+        <Twitter color={gray} size={24}/>
       </Anchor>
 
       <Anchor href='https://www.linkedin.com/in/dimitris-raptis-a7088b132/'>
-        <Linkedin color={black} size={24}/>
+        <Linkedin color={gray} size={24}/>
       </Anchor>
 
       <Anchor href='https://www.instagram.com/dim_raptis/'>
-        <Instagram color={black} size={24}/>
+        <Instagram color={gray} size={24}/>
       </Anchor>
     </Wrapper>    
   );
