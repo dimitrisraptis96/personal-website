@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import Emoji from "react-emojione";
-import Button from '../components/button';
+import Button from '../components/button2';
 import Icons from "../components/Icons";
 
 import { darkgreen, green, black, gray, white } from "../utils/colors";
@@ -66,7 +66,7 @@ const Paragraph = styled.p`
   font-weight: regular;
   color: ${black};
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5rem;
 `;
 
 const Underline = styled.span`
@@ -138,10 +138,15 @@ class Homepage extends React.Component {
       )
     };
 
+    const button = {
+      key: 'btn',
+      content: ( <Button>My work</Button> )
+    }
+
     const offset = 300;
     const interval = 700;
 
-    const items = [quote, bio, name];
+    const items = [button, quote, bio, name];
 
     items.map((item, index) => {
       setTimeout(
@@ -165,7 +170,7 @@ class Homepage extends React.Component {
         >
           {item => props => <div style={props}>{item.content}</div>}
         </Transition>
-        <ButtonWrapper>See my work</ButtonWrapper>
+        {/* <ButtonWrapper>See my work</ButtonWrapper> */}
         <Icons />
       </Content>
     );
