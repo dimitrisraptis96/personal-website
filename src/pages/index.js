@@ -24,7 +24,7 @@ const Content = styled.div`
   padding: 0 5%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: flex-start;
 
@@ -91,47 +91,81 @@ const Bio = styled.div`
   justify-content: center;
 `;
 
-const Homepage = ({ data }) => {
-  const show = true;
+class Homepage extends React.Component {
+  state = {
+    items: []
+  };
 
-  return (
-    <Content>
-      <Transition
-        items={show}
-        from={{ transform: "translate3d(0,-1000px,0)" }}
-        enter={{ transform: "translate3d(0,0px,0)" }}
-        leave={{ transform: "translate3d(0,-1000px,0)" }}
-      >
-        {show =>
-          show &&
-          (props => (
-            <animated.div style={props}>
-              {" "}
-              <Header>
-                <Underline>Dimitris Raptis</Underline>
-              </Header>
-            </animated.div>
-          ))
-        }
-      </Transition>
-      <JobTitle>
-        <Image fixed={data.me.childImageSharp.fixed} />
-        <p>
-          <b>Creative Problem-Solving</b>
-          <br />
-          Frontend engineer @loceye.io
-        </p>
-      </JobTitle>
+  async componentDidMount() {
+    this.t1 && clearTimeout(this.t1);
+    this.t2 && clearTimeout(this.t2);
+    this.t3 && clearTimeout(this.t3);
 
-      <Paragraph>
-        <Emoji>I design and build user interfaces 🤟 </Emoji>
-      </Paragraph>
+    const name = {
+      key: "name",
+      content: (
+        <Header>
+          <Underline>Dimitris Raptis</Underline>
+        </Header>
+      )
+    };
 
+    const bio = {
+      key: "bio",
+      content: (
+        <JobTitle>
+          <Image fixed={this.props.data.me.childImageSharp.fixed} />
+          <p>
+            <b>Creative Problem-Solving</b>
+            <br />
+            Frontend engineer @loceye.io
+          </p>
+        </JobTitle>
+      )
+    };
 
-      <Icons />
-    </Content>
-  );
-};
+    const quote = {
+      key: "quote",
+      content: (
+        <Paragraph>
+          <Emoji>I design and build user interfaces 🤟 </Emoji>
+        </Paragraph>
+      )
+    };
+
+    const offset = 0;
+    const interval = 800;
+
+    this.t1 = setTimeout(() => this.setState({ items: [quote] }), offset);
+    this.t2 = setTimeout(
+      () => this.setState({ items: [quote, bio] }),
+      offset + 2 * interval
+    );
+    this.t3 = setTimeout(
+      () => this.setState({ items: [quote, bio, name] }),
+      offset + 3 * interval
+    );
+  }
+
+  render() {
+    const { items } = this.state;
+
+    return (
+      <Content>
+        <Transition
+          items={items}
+          keys={item => item.key}
+          from={{ transform: "translate3d(-1000px, 0,0)" }}
+          enter={{ transform: "translate3d(0,0px,0)" }}
+          leave={{ transform: "translate3d(0,-1000px,0)" }}
+        >
+          {item => props => <div style={props}>{item.content}</div>}
+        </Transition>
+        <Icons />
+      </Content>
+    );
+  }
+}
 
 export default Homepage;
 
