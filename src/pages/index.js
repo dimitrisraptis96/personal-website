@@ -8,6 +8,8 @@ import Icons from "../components/Icons";
 
 import { darkgreen, green, black, gray, white } from "../utils/colors";
 
+import { Transition, animated } from "react-spring";
+
 const Content = styled.div`
   background-color: #f5f5f5;
   position: absolute;
@@ -90,20 +92,41 @@ const Bio = styled.div`
 `;
 
 const Homepage = ({ data }) => {
+  const show = true;
+
   return (
     <Content>
-      <Header>
-        <Underline>Dimitris Raptis</Underline>
-      </Header>
-
+      <Transition
+        items={show}
+        from={{ transform: "translate3d(0,-1000px,0)" }}
+        enter={{ transform: "translate3d(0,0px,0)" }}
+        leave={{ transform: "translate3d(0,-1000px,0)" }}
+      >
+        {show =>
+          show &&
+          (props => (
+            <animated.div style={props}>
+              {" "}
+              <Header>
+                <Underline>Dimitris Raptis</Underline>
+              </Header>
+            </animated.div>
+          ))
+        }
+      </Transition>
       <JobTitle>
         <Image fixed={data.me.childImageSharp.fixed} />
-        Frontend engineer @loceye.io
+        <p>
+          <b>Creative Problem-Solving</b>
+          <br />
+          Frontend engineer @loceye.io
+        </p>
       </JobTitle>
 
       <Paragraph>
         <Emoji>I design and build user interfaces 🤟 </Emoji>
       </Paragraph>
+
 
       <Icons />
     </Content>
