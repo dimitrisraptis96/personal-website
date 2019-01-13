@@ -24,7 +24,7 @@ const Bio = props => {
 
   return (
     <Wrapper>
-      <Image fixed={this.props.data.me.childImageSharp.fixed} />
+      <Image fixed={fixed} />
       <p>
         <b>Creative Problem-Solving</b>
         <br />

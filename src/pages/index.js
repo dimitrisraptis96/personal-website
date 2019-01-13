@@ -35,7 +35,7 @@ class Homepage extends React.Component {
     items: []
   };
 
-  createObject = (component, key) => ({
+  createObject = (key, component) => ({
     key,
     content: component
   });
