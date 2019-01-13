@@ -2,7 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import {green} from '../utils/colors';
+import {
+  black,
+  green,
+} from '../utils/colors';
+import {
+  radius,
+  shadow,
+} from '../utils/styles';
 
 const PADDING = '1em';
 
@@ -14,13 +21,13 @@ const Wrapper = styled.a`
   transition: all .2s ease;
 
   :before {
-    box-shadow: 0 23px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: ${shadow};
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     display: block;
-    border-radius: 100000px;
+    border-radius: ${radius};
     background: ${green};
     width: calc(23px + 2*${PADDING});
     height: calc(23px + 2*${PADDING});
@@ -44,7 +51,7 @@ const Wrapper = styled.a`
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke: #111;
+    stroke: ${black};
     stroke-width: 2;
     transform: translateX(-5px);
     transition: all .3s ease;
