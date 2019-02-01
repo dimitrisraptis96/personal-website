@@ -1,5 +1,7 @@
 # Personal Website :metal:
  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3cbc49e7-3482-4147-853a-05f60817bbd5/deploy-status)](https://app.netlify.com/sites/practical-tereshkova-1db2a9/deploys)
+ 
 <p align="center">
   <img src="assets/me.png" width="70%">
 </p>
