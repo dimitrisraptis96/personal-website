@@ -4,7 +4,7 @@
 
 Hey all 👋
 
-My name is **Dimitris** and I'm a front-end developer💻 or User Interface designer🎨. That depends on the project I'm 
+My name is Dimitris and I'm a **front-end developer** or **User Interface designer**. That depends on the project I'm 
 interested in. My passion is to design and build awesome, user-centric apps that add value to someone's life. 🧠
 
 &nbsp;
