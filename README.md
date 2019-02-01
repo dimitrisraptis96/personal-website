@@ -2,6 +2,13 @@
  
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3cbc49e7-3482-4147-853a-05f60817bbd5/deploy-status)](https://app.netlify.com/sites/practical-tereshkova-1db2a9/deploys)
 
+Hey all 👋
+
+My name is **Dimitris** and I'm a front-end developer💻 or User Interface designer🎨. That depends on the project I'm 
+interested in. My passion is to design and build awesome, user-centric apps that add value to someone's life. 🧠
+
+&nbsp;
+
 ## :computer: Tech Stack
    - ReactJS 
    - Gatsby
