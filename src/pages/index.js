@@ -84,7 +84,7 @@ export default Homepage;
 
 export const query = graphql`
   query {
-    me: file(relativePath: { eq: "me.jpg" }) {
+    me: file(relativePath: { eq: "new-me.png" }) {
       childImageSharp {
         fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
