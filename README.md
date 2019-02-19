@@ -1,6 +1,6 @@
 # Personal Website :metal:
  
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3cbc49e7-3482-4147-853a-05f60817bbd5/deploy-status)](https://app.netlify.com/sites/practical-tereshkova-1db2a9/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e4520b10-e500-466a-aaeb-2c8f3f599f39/deploy-status)](https://app.netlify.com/sites/naughty-golick-c955d6/deploys)
 
 Hey all 👋
 
