@@ -2,7 +2,7 @@
  
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e4520b10-e500-466a-aaeb-2c8f3f599f39/deploy-status)](https://app.netlify.com/sites/naughty-golick-c955d6/deploys)
 
-Hey all 👋
+👋 Hey all
 
 My name is Dimitris and I'm a **developer** or **designer**. My passion is to design and build awesome, user-centric apps that add value to someone's life.
 
