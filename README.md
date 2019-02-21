@@ -4,18 +4,18 @@
 
 Hey all 👋
 
-My name is Dimitris and I'm a **developer** or **designer**. My passion is to design and build awesome, user-centric apps that add value to someone's life. 🧠
+My name is Dimitris and I'm a **developer** or **designer**. My passion is to design and build awesome, user-centric apps that add value to someone's life.
 
 &nbsp;
 
-## :computer: Tech Stack
+## 👨‍💻 Tech Stack
    - ReactJS 
    - Gatsby
    - Netlify
 
 &nbsp;
 
-## :clipboard: Todo List
+## 🚀 Todo List
 - [ ] Fix display name (SEO component and gatsby-config)
 - [ ] Connect gatsby-blog-starter
 - [ ] Try to add a CSS3 animated background 🌠
