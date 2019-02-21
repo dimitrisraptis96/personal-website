@@ -4,7 +4,7 @@
 
 👋 Hey all
 
-My name is Dimitris and I'm a **developer** or **designer**. My passion is to design and build awesome, user-centric apps that add value to someone's life.
+My name is Dimitris and I'm a **developer** or **designer**. My passion is designing and building clean & user-centric apps that give value to someone's life.
 
 &nbsp;
 
