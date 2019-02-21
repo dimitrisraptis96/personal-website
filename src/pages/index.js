@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { Transition, animated } from "react-spring";
 import styled from "styled-components";
 
@@ -8,6 +8,7 @@ import Bio from "../components/Bio";
 import Button from "../components/Button";
 import Name from "../components/Name";
 import Icons from "../components/Icons";
+import SEO from "../components/seo";
 
 import { white } from "../utils/colors";
 
@@ -32,25 +33,28 @@ const Content = styled.div`
 
 class Homepage extends React.Component {
   state = {
-    items: []
+    items: [],
   };
 
   createObject = (key, component) => ({
     key,
-    content: component
+    content: component,
   });
 
   async componentDidMount() {
-    const name = this.createObject('name', <Name/>);
-    const bio = this.createObject('bio', <Bio fixed={this.props.data.me.childImageSharp.fixed} />);
-    const quote = this.createObject('quote', <Quote />);
-    const work = this.createObject('work', <Button>My work</Button>);
-    // const blog = this.createObject('blog', <Button>Blog</Button>);
+    const name = this.createObject("name", <Name />);
+    const bio = this.createObject(
+      "bio",
+      <Bio fixed={this.props.data.me.childImageSharp.fixed} />
+    );
+    const quote = this.createObject("quote", <Quote />);
+    // const work = this.createObject('work', <Button>My work</Button>);
+    const blog = this.createObject("blog", <Link to='/blog' style={{ textDecoration: 'none', color: 'none' }}><Button>Blog</Button></Link>);
 
     const offset = 300;
     const interval = 700;
 
-    const items = [work, quote, bio, name];
+    const items = [blog, quote, bio, name];
 
     items.map((item, index) => {
       setTimeout(
@@ -65,14 +69,18 @@ class Homepage extends React.Component {
 
     return (
       <Content>
+        <SEO
+          title="Landing"
+          keywords={[`portfolio`, `frontend`, `designer`, `ux`, "ui", "builder", "raptis", "dimitris"]}
+        />
         <Transition
           items={items}
-          keys={item => item.key}
+          keys={(item) => item.key}
           from={{ transform: "translate3d(-1000px, 0,0)" }}
           enter={{ transform: "translate3d(0,0px,0)" }}
           leave={{ transform: "translate3d(0,-1000px,0)" }}
         >
-          {item => props => <div style={props}>{item.content}</div>}
+          {(item) => (props) => <div style={props}>{item.content}</div>}
         </Transition>
         <Icons />
       </Content>
