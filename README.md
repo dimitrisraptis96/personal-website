@@ -16,13 +16,19 @@ My name is Dimitris and I'm a **developer** or **designer**. My passion is to de
 &nbsp;
 
 ## :clipboard: Todo List
-- [ ] Fix display name (SEO component and gatsby-config)
-- [ ] Connect gatsby-blog-starter
+- [x] Fix display name (SEO component and gatsby-config)
+- [x] Connect gatsby-blog-starter
 - [ ] Try to add a CSS3 animated background 🌠
 - [x] Change cringe image of this README.md
 - [ ] Refactor and componentize code
 - [x] Add CTA link
 - [ ] Create *My work* page ASAP
+- [ ] Take care of gatsbsy's Link styling
+- [ ] Polish my 1rst blog post
+- [ ] Install fonts using gatsby plugin (see blog gatsby starter)
+- [ ] Custom blog bio and footer
+- [ ] Add commenting plugin
+- [ ] Create BUY ME A COFFEE design
  
 &nbsp;
 
