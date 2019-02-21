@@ -2,20 +2,20 @@
  
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e4520b10-e500-466a-aaeb-2c8f3f599f39/deploy-status)](https://app.netlify.com/sites/naughty-golick-c955d6/deploys)
 
-Hey all 👋
+👋 Hey all
 
-My name is Dimitris and I'm a **developer** or **designer**. My passion is to design and build awesome, user-centric apps that add value to someone's life. 🧠
+My name is Dimitris and I'm a **developer** or **designer**. My passion is designing and building clean & user-centric apps that give value to someone's life.
 
 &nbsp;
 
-## :computer: Tech Stack
+## 👨‍💻 Tech Stack
    - ReactJS 
    - Gatsby
    - Netlify
 
 &nbsp;
 
-## :clipboard: Todo List
+## 🚀 Todo List
 - [x] Fix display name (SEO component and gatsby-config)
 - [x] Connect gatsby-blog-starter
 - [ ] Try to add a CSS3 animated background 🌠
