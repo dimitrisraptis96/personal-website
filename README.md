@@ -1,6 +1,8 @@
 # Personal Website [![Netlify Status](https://api.netlify.com/api/v1/badges/e4520b10-e500-466a-aaeb-2c8f3f599f39/deploy-status)](https://app.netlify.com/sites/naughty-golick-c955d6/deploys)
 
-<a href="https://www.paypal.me/DimitrisRaptis/2.99"><img width="25%" src="./assets/buy-me-a-coffee.png"/></a>
+<p align="right">
+<a href="https://www.paypal.me/DimitrisRaptis/2.99"><img width="25%" src="./assets/buy-me-a-coffee.png"/></a>   
+</p>
 
 👋 Hey all
 
