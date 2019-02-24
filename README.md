@@ -6,6 +6,10 @@
 
 My name is Dimitris and I'm a **developer** or **designer**. My passion is designing and building clean & user-centric apps that give value to someone's life.
 
+<p align="right" >
+<a href="https://www.paypal.me/DimitrisRaptis/2.99"><img width="25%" src="./assets/buy-me-a-coffee.png"/></a>
+</p>
+
 &nbsp;
 
 ## 👨‍💻 Tech Stack
@@ -37,6 +41,14 @@ My name is Dimitris and I'm a **developer** or **designer**. My passion is desig
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
 
 &nbsp;
+
+## Font
+
+- [Bree Serif](https://fonts.google.com/specimen/Bree+Serif)
+- [Rufina](https://fonts.google.com/specimen/Rufina)
+- [Nunito](https://fonts.google.com/specimen/Nunito)
+- [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+
 
 <p align="center">
 <sub><sup>Made with 🤘 by <a href="https://twitter.com/d__raptis">@d__raptis</a></sup></sub>
