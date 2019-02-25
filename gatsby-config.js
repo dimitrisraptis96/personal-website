@@ -5,7 +5,8 @@ module.exports = {
     author: 'Raptis Dimitris',
     description: 'My god damn portfolio!',
     siteUrl: 'raptis.wtf',
-    title: 'Portfolio | Raptis Dimitris ',
+    title: 'Raptis Dimitris',
+    blogTitle: 'Blog',
     social: {
       twitter: 'https://twitter.com/d__raptis',
     }
