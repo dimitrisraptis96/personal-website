@@ -1,48 +1,36 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
 
-import { rhythm } from "../utils/typography"
+import Image from "./Image";
+import { rhythm } from "../utils/typography";
+import { gray } from '../utils/colors';
+import { rgba } from 'polished';
 
-function Bio() {
+function Bio({margin}) {
   return (
     <StaticQuery
       query={bioQuery}
-      render={data => {
-        const { author, social } = data.site.siteMetadata
+      render={(data) => {
+        const { author, social } = data.site.siteMetadata;
         return (
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(2.5),
+              marginTop: rhythm(margin),
+              marginBottom: rhythm(margin),
             }}
           >
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            />
+            <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+              Crafting clean and user-friendly things since 1996.
+              <br />
+              <sup style={{color: rgba(gray, .8)}}>Frontend engineer @loceye.io</sup>
             </p>
           </div>
-        )
+        );
       }}
     />
-  )
+  );
 }
 
 const bioQuery = graphql`
@@ -63,6 +51,6 @@ const bioQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Bio
+export default Bio;

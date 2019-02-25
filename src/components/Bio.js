@@ -26,9 +26,12 @@ const Bio = props => {
     <Wrapper>
       <Image fixed={fixed} />
       <p>
-        <b>Creative Problem-Solving</b>
+        Crafting clean and user-friendly things since 1996.
         <br />
+        <sub style={{color: 'gray'}}>
         Frontend engineer @loceye.io
+
+        </sub>
       </p>
     </Wrapper>
   );

@@ -1,13 +1,16 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import { rhythm, scale } from "../utils/typography"
+import Footer from "./Footer";
+import Underline from "./Underline";
+
+import { rhythm, scale } from "../utils/typography";
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+    const { location, title, children } = this.props;
+    const rootPath = `${__PATH_PREFIX__}/`;
+    let header;
 
     if (location.pathname === rootPath) {
       header = (
@@ -29,13 +32,15 @@ class Layout extends React.Component {
             {title}
           </Link>
         </h1>
-      )
+      );
     } else {
       header = (
-        <h3
+        <h1
           style={{
-            fontFamily: `Montserrat, sans-serif`,
+            fontFamily: `Poppins, sans-serif`,
             marginTop: 0,
+            fontSize: "4em",
+            fontWeight: "bold",
           }}
         >
           <Link
@@ -46,10 +51,11 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            <Underline>{title}</Underline>
+            {/* {title} */}
           </Link>
-        </h3>
-      )
+        </h1>
+      );
     }
     return (
       <div
@@ -62,14 +68,10 @@ class Layout extends React.Component {
       >
         <header>{header}</header>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
-    )
+    );
   }
 }
 
-export default Layout
+export default Layout;

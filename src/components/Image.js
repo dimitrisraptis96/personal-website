@@ -1,4 +1,3 @@
-import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 
@@ -10,9 +9,9 @@ import {
 const Image = styled(Img)`
   box-shadow: ${shadow};
   border-radius: ${radius};
-  max-width: 40px;
-  max-height: 40px;
-  margin-right: 1em;
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 1.5em;
 `;
 
 export default Image;
