@@ -1,16 +1,18 @@
 ---
 title: "VS Code snippets: Skyrocket your development in 1 minute"
 date: "2015-05-06T23:46:37.121Z"
+summary: "Code productivity is an ultimate part of the developer’s life. Writing less code and..."
 ---
+<p width="100%" align="center">
+  <img src="https://cdn-images-1.medium.com/max/2560/0*agR0P0-AgvbGbK8H"/>
+  <sup>
+    Photo by <a href="https://unsplash.com/@lux17?utm_source=medium&utm_medium=referral">Lucas Clara</a> on
+    <a href="https://unsplash.com/?utm_source=medium&utm_medium=referral">Unsplash</a>
+</p>
 
-![](https://cdn-images-1.medium.com/max/2560/0*agR0P0-AgvbGbK8H)
-<span class="figcaption_hack">Photo by [Lucas
-Clara](https://unsplash.com/@lux17?utm_source=medium&utm_medium=referral) on
-[Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)</span>
-
-Code productivity is an ultimate part of a developer’s life. Writing less code
+Code productivity is an ultimate part of the developer’s life. Writing less code
 and staying clear of repeatable snippets will eventually result in being focused
-on the important part of software engineering. Don’t underestimate the benefits
+on the important parts of software engineering. Don’t underestimate the benefits
 of your mental health, too.
 
 > Writing less code and staying clear of repeatable snippets will eventually
@@ -22,15 +24,17 @@ that my productivity was extremely boosted 🚀
 The exciting part is that you can dedicate **up to 1 minute** in order to set up
 your first code snippet. 😵
 
-<span class="figcaption_hack">Yeah, you read that correctly! Just 1 MINUTE!</span>
+<p width="100%" align="center">
+  <img width="100%" src="https://media.giphy.com/media/2nj3hg9hlzeefc0aZT/giphy.gif"/>
+  <sup>
+    Yeah, you read that correctly! Just 1 MINUTE!
+</p>
 
 ### 🏁 Let’s start
 
-I’m gonna assume that *you’ve already defined the repeating code sample*, which
-will become our awesome VS Code snippet.
+I’m gonna assume that *you’ve already defined the repeating code sample*, which will become our awesome VS Code snippet.
 
-For me and the majority of front-end developers,** the creation of a stateless
-(or dumb) component** is a pretty de-facto programming chore.
+For me and the majority of front-end developers,** the creation of a stateless (or dumb) component** is a pretty de-facto programming chore.
 
 ![](https://cdn-images-1.medium.com/max/800/1*d1GM99zfLNnPNXDZHPKEAQ.png)
 
@@ -62,7 +66,7 @@ occurrences of the same tabstop are linked and updated** in sync**.
 
 ### 3. Add variables
 
-With `$name` or `${name:default}` you can insert the **value **of a variable.
+With `$name` or `${name:default}` you can insert the **value** of a variable.
 When a variable isn’t set, its *default* or *the empty string* is inserted.
 
 ![](https://cdn-images-1.medium.com/max/800/1*YASzpeljMX9eBMIhQa0aiA.png)
@@ -105,7 +109,7 @@ Then, you’ll be prompted to select the language scope for which the snippets
 should appear.
 
 Our snippet is created for React Js so we’re gonna use
-`javascript.json(Javascript Babel)`** **snippet file type.
+`javascript.json(Javascript Babel)` snippet file type.
 
 ![](https://cdn-images-1.medium.com/max/800/1*7d3IwcHzHLmplteHZS0UqA.gif)
 
@@ -137,7 +141,7 @@ Open a new `.js` file and type the prefix `dumb`.
 
 ### Are you lazy like me?
 
-👉 You can find a curated list of useful React snippets at my personal
+👉 You can find a curated list of useful React snippets at my
 [repo](https://github.com/dimitrisraptis96/vscode-react-snippets) 👈
 
 🔗 Useful links:
@@ -145,9 +149,3 @@ Open a new `.js` file and type the prefix `dumb`.
 * [https://github.com/dimitrisraptis96/vscode-react-snippets](https://github.com/dimitrisraptis96/vscode-react-snippets)
 * [https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables)
 * [https://snippet-generator.app](https://snippet-generator.app/)
-
-* [JavaScript](https://medium.com/tag/javascript?source=post)
-* [React](https://medium.com/tag/react?source=post)
-* [Reactjs Development](https://medium.com/tag/reactjs-development?source=post)
-* [Js](https://medium.com/tag/js?source=post)
-* [Vscode](https://medium.com/tag/vscode?source=post)
