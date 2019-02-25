@@ -1,21 +1,57 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import CustomLink from "../components/CustomLink";
+import Bio from "../components/bio";
+import Layout from "../components/BlogLayout";
+import SEO from "../components/seo";
+import { rhythm, scale } from "../utils/typography";
+import { green, gray } from "../utils/colors";
+import { rgba } from "polished";
+import styled from "styled-components";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+const Div = styled.div`
+  img {
+    margin-bottom: 0.25rem;
+  }
+  sup {
+    color: ${rgba(gray, 0.8)};
+    text-align: center;
+  }
+  blockquote {
+    color: ${rgba(green, 0.8)};
+    font-style: italic;
+    /* font-family: "Abril Fatface"; */
+    margin: 2rem;
+  }
+  blockquote:before {
+    color: ${green};
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 0 2px;
+  }
+`;
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const post = this.props.data.markdownRemark;
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { previous, next } = this.props.pageContext;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={post.frontmatter.title}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
+        {/* <h1>{post.frontmatter.title}</h1> */}
         <p
           style={{
             ...scale(-1 / 5),
@@ -26,7 +62,7 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -59,11 +95,11 @@ class BlogPostTemplate extends React.Component {
           </li>
         </ul>
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -83,4 +119,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
