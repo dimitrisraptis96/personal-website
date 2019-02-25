@@ -4,7 +4,7 @@ import { Transition, animated } from "react-spring";
 import styled from "styled-components";
 
 import Quote from "../components/Quote";
-import Bio from "../components/Bio";
+import Bio from "../components/bio";
 import Button from "../components/Button";
 import Name from "../components/Name";
 import Icons from "../components/Icons";
@@ -45,7 +45,7 @@ class Homepage extends React.Component {
     const name = this.createObject("name", <Name />);
     const bio = this.createObject(
       "bio",
-      <Bio fixed={this.props.data.me.childImageSharp.fixed} />
+      <Bio margin={.25} />
     );
     const quote = this.createObject("quote", <Quote />);
     // const work = this.createObject('work', <Button>My work</Button>);
