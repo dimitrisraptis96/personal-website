@@ -25,6 +25,7 @@ pre[class*="language-"] {
   hyphens: none;
   background: #0b1c2c;
   color: #cbd6e2;
+  border-radius: 8px;
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
@@ -41,8 +42,8 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
+  padding: 1.5em;
+  margin: 2em 0;
   overflow: auto;
 }
 
@@ -162,4 +163,16 @@ pre > code.highlight {
   background: rgba(247, 249, 251, 0.2) !important;
   background: -webkit-linear-gradient(left, rgba(247, 249, 251, 0.2) 70%, rgba(247, 249, 251, 0)) !important;
   background: linear-gradient(to right, rgba(247, 249, 251, 0.2) 70%, rgba(247, 249, 251, 0)) !important;
+}
+
+.gatsby-highlight-code-line {
+  background: rgba(247, 249, 251, 0.2) !important;
+  background: -webkit-linear-gradient(left, rgba(247, 249, 251, 0.2) 70%, rgba(247, 249, 251, 0)) !important;
+  background: linear-gradient(to right, rgba(247, 249, 251, 0.2) 70%, rgba(247, 249, 251, 0)) !important;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  /* border-left: 0.25em solid #f99; */
 }
