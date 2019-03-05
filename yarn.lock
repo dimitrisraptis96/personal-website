@@ -2597,11 +2597,6 @@ concat-stream@^1.5.0:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-confetti-js@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/confetti-js/-/confetti-js-0.0.14.tgz#c719cd713630fe58f6e641f541e92e06a0d9cdd2"
-  integrity sha512-akIrsrXYQ2i7DkrzM92ftFLe012vZLByVau75N8kGhbjQIWyUicU311ttfvwOoMGdoN4wtWdLi6cU6WJkuWXIw==
-
 config-chain@^1.1.11:
   version "1.1.12"
   resolved "https://registry.yarnpkg.com/config-chain/-/config-chain-1.1.12.tgz#0fde8d091200eb5e808caf25fe618c02f48e4efa"
