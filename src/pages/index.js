@@ -2,7 +2,9 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { Transition, animated } from "react-spring";
 import styled from "styled-components";
+import "confetti-js";
 
+import BuyMeACoffee from "../components/BuyMeACoffee";
 import Quote from "../components/Quote";
 import Bio from "../components/bio";
 import Button from "../components/Button";
@@ -43,16 +45,18 @@ class Homepage extends React.Component {
 
   async componentDidMount() {
     const name = this.createObject("name", <Name />);
-    const bio = this.createObject(
-      "bio",
-      <Bio margin={.25} />
-    );
+    const bio = this.createObject("bio", <Bio margin={0.25} />);
     const quote = this.createObject("quote", <Quote />);
     // const work = this.createObject('work', <Button>My work</Button>);
-    const blog = this.createObject("blog", <Link to='/blog' style={{ textDecoration: 'none', color: 'none' }}><Button>Blog</Button></Link>);
+    const blog = this.createObject(
+      "blog",
+      <Link to="/blog" style={{ textDecoration: "none", color: "none" }}>
+        <Button>Blog</Button>
+      </Link>
+    );
 
-    const offset = 300;
-    const interval = 700;
+    const offset = 250;
+    const interval = 500;
 
     const items = [blog, quote, bio, name];
 
@@ -62,6 +66,18 @@ class Homepage extends React.Component {
         offset + (index + 1) * interval
       );
     });
+
+    // var confettiSettings = { target: 'my-canvas' };
+    // var confetti = new window.ConfettiGenerator(confettiSettings);
+    // confetti.render();
+
+    // setTimeout(
+    //   () => {
+    //     this.setState({ items: [...this.state.items, this.createObject("coffee", <BuyMeACoffee />)] });
+    //     console.log('executed');
+    //   },
+    //   5000
+    // );
   }
 
   render() {
@@ -69,21 +85,33 @@ class Homepage extends React.Component {
 
     return (
       <Content>
-        <SEO
-          title="Landing"
-          keywords={[`portfolio`, `frontend`, `designer`, `ux`, "ui", "builder", "raptis", "dimitris"]}
-        />
-        <Transition
-          items={items}
-          keys={(item) => item.key}
-          from={{ transform: "translate3d(-1000px, 0,0)" }}
-          enter={{ transform: "translate3d(0,0px,0)" }}
-          leave={{ transform: "translate3d(0,-1000px,0)" }}
-        >
-          {(item) => (props) => <div style={props}>{item.content}</div>}
-        </Transition>
-        <Icons />
-      </Content>
+          <SEO
+            title="Landing"
+            keywords={[
+              `portfolio`,
+              `frontend`,
+              `designer`,
+              `ux`,
+              "ui",
+              "builder",
+              "raptis",
+              "dimitris",
+            ]}
+          />
+      {/* <canvas id="my-canvas">
+      </canvas> */}
+          <Transition
+            items={items}
+            keys={(item) => item.key}
+            from={{ transform: "translate3d(-1000px, 0,0)" }}
+            enter={{ transform: "translate3d(0,0px,0)" }}
+            leave={{ transform: "translate3d(0,-1000px,0)" }}
+          >
+            {(item) => (props) => <div style={props}>{item.content}</div>}
+          </Transition>
+          <Icons />
+          <BuyMeACoffee />
+        </Content>
     );
   }
 }
