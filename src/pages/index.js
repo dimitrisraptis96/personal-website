@@ -2,7 +2,6 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { Transition, animated } from "react-spring";
 import styled from "styled-components";
-import "confetti-js";
 
 import BuyMeACoffee from "../components/BuyMeACoffee";
 import Quote from "../components/Quote";
@@ -66,18 +65,6 @@ class Homepage extends React.Component {
         offset + (index + 1) * interval
       );
     });
-
-    // var confettiSettings = { target: 'my-canvas' };
-    // var confetti = new window.ConfettiGenerator(confettiSettings);
-    // confetti.render();
-
-    // setTimeout(
-    //   () => {
-    //     this.setState({ items: [...this.state.items, this.createObject("coffee", <BuyMeACoffee />)] });
-    //     console.log('executed');
-    //   },
-    //   5000
-    // );
   }
 
   render() {
