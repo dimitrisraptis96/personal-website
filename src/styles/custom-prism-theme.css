@@ -9,7 +9,10 @@ Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/b
 */
 code[class*="language-"],
 pre[class*="language-"] {
-  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
+    "Courier New", Courier, monospace;
   font-size: 14px;
   line-height: 1.375;
   direction: ltr;
@@ -26,31 +29,44 @@ pre[class*="language-"] {
   background: #0b1c2c;
   color: #cbd6e2;
   border-radius: 8px;
+  -webkit-box-shadow: 0px 22px 54px -12px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: 0px 22px 54px -12px rgba(0, 0, 0, 0.69);
+  box-shadow: 0px 22px 54px -12px rgba(0, 0, 0, 0.69);
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
   text-shadow: none;
   background: #aabcce;
 }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
   text-shadow: none;
   background: #aabcce;
 }
 
 /* Code blocks */
 pre[class*="language-"] {
-  padding: 1.5em;
-  margin: 2em 0;
+  padding: 2em;
+  margin: 3em 0;
   overflow: auto;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
+  padding: 0.25em .5em;
+  border-radius: 0.3em;
+  background-color: #ddd;
+  color: #555;
+  background: rgba(0, 0, 0, 0.075);
+  text-align: center;
+  /* font-style: italic; */
+  /* font-size: 12px; */
 }
 
 .token.comment,
@@ -65,7 +81,7 @@ pre[class*="language-"] {
 }
 
 .token.namespace {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .token.operator,
@@ -148,7 +164,7 @@ pre[class*="language-"] {
 
 pre > code.highlight {
   outline: 0.4em solid #bf8b56;
-  outline-offset: .4em;
+  outline-offset: 0.4em;
 }
 
 .line-numbers .line-numbers-rows {
@@ -161,18 +177,45 @@ pre > code.highlight {
 
 .line-highlight {
   background: rgba(247, 249, 251, 0.2) !important;
-  background: -webkit-linear-gradient(left, rgba(247, 249, 251, 0.2) 70%, rgba(247, 249, 251, 0)) !important;
-  background: linear-gradient(to right, rgba(247, 249, 251, 0.2) 70%, rgba(247, 249, 251, 0)) !important;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(247, 249, 251, 0.2) 70%,
+    rgba(247, 249, 251, 0)
+  ) !important;
+  background: linear-gradient(
+    to right,
+    rgba(247, 249, 251, 0.2) 70%,
+    rgba(247, 249, 251, 0)
+  ) !important;
 }
 
 .gatsby-highlight-code-line {
   background: rgba(247, 249, 251, 0.2) !important;
-  background: -webkit-linear-gradient(left, rgba(247, 249, 251, 0.2) 70%, rgba(247, 249, 251, 0)) !important;
-  background: linear-gradient(to right, rgba(247, 249, 251, 0.2) 70%, rgba(247, 249, 251, 0)) !important;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(247, 249, 251, 0.2) 70%,
+    rgba(247, 249, 251, 0)
+  ) !important;
+  background: linear-gradient(
+    to right,
+    rgba(247, 249, 251, 0.2) 70%,
+    rgba(247, 249, 251, 0)
+  ) !important;
   display: block;
   margin-right: -1em;
   margin-left: -1em;
   padding-right: 1em;
   padding-left: 0.75em;
   /* border-left: 0.25em solid #f99; */
+}
+
+/* Adjust the position of the line numbers */
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding-left: 2.8em;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
 }
