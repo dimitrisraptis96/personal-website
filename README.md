@@ -26,12 +26,15 @@ My name is Dimitris and I'm a **developer** or **designer**. My passion is desig
 - [x] Add CTA link
 - [ ] Create *My work* page ASAP
 - [ ] Take care of gatsbsy's Link styling
-- [ ] Polish my 1rst blog post
+- [x] Polish my 1rst blog post
 - [ ] Install fonts using gatsby plugin (see blog gatsby starter)
 - [x] Custom blog bio and footer
 - [ ] Add commenting plugin
 - [x] Create BUY ME A COFFEE design
 - [ ] Add social media footer bar
+- [ ] Header for blog
+- [ ] Back button for blog
+- [ ] Fix Dribbble hover color
  
 &nbsp;
 
