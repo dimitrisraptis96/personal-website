@@ -31,15 +31,6 @@ const Div = styled.div`
     margin-right: 0.25em;
     vertical-align: -0.4em;
   }
-
-  /* code {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 16px;
-    background: rgba(0, 0, 0, 0.05);
-    padding: 4px 8px;
-    border-radius: 4px;
-    margin: 0 2px;
-  } */
 `;
 
 class BlogPostTemplate extends React.Component {
