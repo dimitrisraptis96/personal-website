@@ -34,9 +34,22 @@ your first code snippet. 😵
 
 I’m gonna assume that *you’ve already defined the repeating code sample*, which will become our awesome VS Code snippet.
 
-For me and the majority of front-end developers,** the creation of a stateless (or dumb) component** is a pretty de-facto programming chore.
+For me and the majority of front-end developers,**the creation of a stateless (or dumb) component** is a pretty de-facto programming chore.
 
-![](https://cdn-images-1.medium.com/max/800/1*d1GM99zfLNnPNXDZHPKEAQ.png)
+```jsx
+  import React from "react";
+
+  const AwesomeCounter = ({counter}) => {
+    const message = `Current counter values is ${counter}`;
+
+    return(
+      <div>{message}</div>
+    );
+  };
+
+  export default AwesomeCounter;
+
+```
 
 ### 1. Define the core snippet
 
@@ -46,7 +59,19 @@ string messages) should be removed.
 
 Here you’ll only need the **skeleton** of your snippet.
 
-![](https://cdn-images-1.medium.com/max/800/1*MJkdYwasqpxVXv9rmByi_w.png)
+```jsx
+  import React from 'react';
+
+  const = ({}) => {
+
+    return(
+
+    );
+  };
+
+  export default ;
+
+```
 
 *****
 
@@ -58,9 +83,21 @@ Firstly, what the heck is a **tabstop**?!
 
 With tabstops, you can make the editor cursor move inside a snippet. Use `$1`,
 `$2`,etc. to specify **cursor locations**. The real fun is that multiple
-occurrences of the same tabstop are linked and updated** in sync**.
+occurrences of the same tabstop are linked and updated **in sync**.
 
-![](https://cdn-images-1.medium.com/max/800/1*IDR2ffyvUv8dPcigSGrgzg.png)
+```jsx
+  import React from 'react';
+
+  const $1 = ({$2}) => {
+    $3
+    return(
+      $4
+    );
+  };
+
+  export default $1;
+
+```
 
 *****
 
@@ -69,14 +106,26 @@ occurrences of the same tabstop are linked and updated** in sync**.
 With `$name` or `${name:default}` you can insert the **value** of a variable.
 When a variable isn’t set, its *default* or *the empty string* is inserted.
 
-![](https://cdn-images-1.medium.com/max/800/1*YASzpeljMX9eBMIhQa0aiA.png)
+```jsx
+  import React from 'react';
+
+  const $TM_FILENAME_BASE = ({$2:defaultProp}) => {
+    $3
+    return(
+      $4
+    );
+  };
+
+  export default $TM_FILENAME_BASE;
+
+```
 
 🙋‍♂ ️**PRO TIP:**
 
 VS Code provides some great [predefined
 variables](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables).
 
-*For example, the *`TM_FILENAME_BASE`* autocompletes the filename of the current
+*For example, the `TM_FILENAME_BASE` autocompletes the filename of the current
 document without its extensions.*
 
 *****
@@ -90,7 +139,25 @@ You can either convert your code manually or use
 Grzybek](https://pawelgrzybek.com/). Snippet generator converts your code to VS
 Code, Sublime or Atom snippet!
 
-![](https://cdn-images-1.medium.com/max/800/1*fJW497tJ3zZoZ55YX8dSyw.png)
+```json
+  "Stateless React component": {
+    "prefix": "dumb",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const $TM_FILENAME_BASE = ({$2:defaultProp}) => {",
+      "	$3",
+      "	return(",
+      "		$4",
+      "	);",
+      "};",
+      "",
+      "export default $TM_FILENAME_BASE;",
+      ""
+    ],
+    "description": "Create a stateless React component"
+  }
+```
 
 The major attributes are the following:
 
@@ -145,7 +212,6 @@ Open a new `.js` file and type the prefix `dumb`.
 [repo](https://github.com/dimitrisraptis96/vscode-react-snippets) 👈
 
 🔗 Useful links:
-
 * [https://github.com/dimitrisraptis96/vscode-react-snippets](https://github.com/dimitrisraptis96/vscode-react-snippets)
 * [https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables)
 * [https://snippet-generator.app](https://snippet-generator.app/)
