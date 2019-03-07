@@ -8,6 +8,7 @@ import { rhythm, scale } from "../utils/typography";
 import { green, gray } from "../utils/colors";
 import { rgba } from "polished";
 import styled from "styled-components";
+import Snakke from 'react-snakke'
 
 const Div = styled.div`
   img {
@@ -42,6 +43,8 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={post.frontmatter.title}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <Snakke color={green} height="5px" opacity=".8" zIndex="10" />
+
         {/* <h1>{post.frontmatter.title}</h1> */}
         <p
           style={{

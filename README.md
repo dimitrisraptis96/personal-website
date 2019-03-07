@@ -20,7 +20,7 @@ My name is Dimitris and I'm a **developer** or **designer**. My passion is desig
 ## 🚀 Todo List
 - [x] Fix display name (SEO component and gatsby-config)
 - [x] Connect gatsby-blog-starter
-- [ ] Try to add a CSS3 animated background 🌠
+- [x] Try to add a CSS3 animated background 🌠
 - [x] Change cringe image of this README.md
 - [ ] Refactor and componentize code
 - [x] Add CTA link
