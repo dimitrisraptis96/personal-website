@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { Transition, animated } from "react-spring";
+import { Transition, animated } from "react-spring/renderprops";
 import styled from "styled-components";
 
 import BuyMeACoffee from "../components/BuyMeACoffee";
