@@ -11,14 +11,16 @@ class Layout extends React.Component {
     const { location, title, children } = this.props;
     const rootPath = `${__PATH_PREFIX__}/`;
     let header;
+    
 
-    if (location.pathname === rootPath) {
+    if (location.pathname === '/blog') {
       header = (
-        <h1
+        <h4
           style={{
             ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            fontFamily: `Poppins, sans-serif`,
             marginTop: 0,
+            fontWeight: "bold",
           }}
         >
           <Link
@@ -27,19 +29,19 @@ class Layout extends React.Component {
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={`/blog`}
+            to={`/`}
           >
-            {title}
+            <Underline>Home</Underline>
           </Link>
-        </h1>
+        </h4>
       );
     } else {
       header = (
-        <h1
+        <h4
           style={{
+            ...scale(1.5),
             fontFamily: `Poppins, sans-serif`,
             marginTop: 0,
-            fontSize: "4em",
             fontWeight: "bold",
           }}
         >
@@ -51,10 +53,10 @@ class Layout extends React.Component {
             }}
             to={`/blog`}
           >
-            <Underline>{title}</Underline>
+            <Underline>Blog</Underline>
             {/* {title} */}
           </Link>
-        </h1>
+        </h4>
       );
     }
     return (

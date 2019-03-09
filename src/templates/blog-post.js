@@ -45,7 +45,8 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <Snakke color={green} height="5px" opacity=".8" zIndex="10" />
 
-        {/* <h1>{post.frontmatter.title}</h1> */}
+
+        <h1>{post.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),

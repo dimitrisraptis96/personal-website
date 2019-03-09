@@ -11,7 +11,7 @@ import Name from "../components/Name";
 import Icons from "../components/Icons";
 import SEO from "../components/seo";
 
-import { white } from "../utils/colors";
+import { white, black } from "../utils/colors";
 
 const Content = styled.div`
   background-color: ${white};
@@ -49,7 +49,7 @@ class Homepage extends React.Component {
     // const work = this.createObject('work', <Button>My work</Button>);
     const blog = this.createObject(
       "blog",
-      <Link to="/blog" style={{ textDecoration: "none", color: "none" }}>
+      <Link to="/blog" style={{ textDecoration: "none", color: black }} >
         <Button>Blog</Button>
       </Link>
     );
