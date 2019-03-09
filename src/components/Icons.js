@@ -50,8 +50,8 @@ const Icons = ({}) => {
         <Twitter color={gray} size={24}/>
       </Anchor>
 
-      <Anchor href='https://dribbble.com/dmraptis'>
-        <Dribbble isFill={true} color={gray} size={24}/>
+      <Anchor href='https://dribbble.com/dmraptis' isFill={true}>
+        <Dribbble color={gray} size={25}/>
       </Anchor>
 
       <Anchor href='https://www.linkedin.com/in/dimitris-raptis-a7088b132/'>
