@@ -1,48 +1,57 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { StaticQuery, graphql } from "gatsby";
+import { rgba } from 'polished';
+
 import Image from "./Image";
-import styled from 'styled-components';
-import {gray} from '../utils/colors';
 
-const Wrapper = styled.p`
-  font-family: "Poppins", sans-serif;
-  font-size: 1em;
-  font-weight: regular;
-  color: ${gray};
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+import { rhythm } from "../utils/typography";
+import { gray } from '../utils/colors';
 
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-`;
-
-const Bio = props => {
-  const { fixed } = props;
-
+const Bio = ({margin}) => {
   return (
-    <Wrapper>
-      <Image fixed={fixed} />
-      <p>
-        Crafting clean and user-friendly things since 1996.
-        <br />
-        <sub style={{color: 'gray'}}>
-        Frontend engineer @loceye.io
-
-        </sub>
-      </p>
-    </Wrapper>
+    <StaticQuery
+      query={bioQuery}
+      render={(data) => {
+        const { author } = data.site.siteMetadata;
+        return (
+          <div
+            style={{
+              display: `flex`,
+              marginTop: rhythm(margin),
+              marginBottom: rhythm(margin),
+            }}
+          >
+            <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
+            <p>
+              Crafting clean and user-friendly things since 1996.
+              <br />
+              <sup style={{color: rgba(gray, .8)}}>Frontend engineer @loceye.io</sup>
+            </p>
+          </div>
+        );
+      }}
+    />
   );
-};
+}
 
-Bio.propTypes = {
-  fixed: PropTypes.object
-};
-
-Bio.defaultProps = {
-  fixed: null
-};
+const bioQuery = graphql`
+  query BioQuery {
+    avatar: file(absolutePath: { regex: "/new-me.png/" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        author
+        social {
+          twitter
+        }
+      }
+    }
+  }
+`;
 
 export default Bio;

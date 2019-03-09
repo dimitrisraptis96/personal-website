@@ -1,11 +1,11 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
-import { Transition, animated } from "react-spring/renderprops";
+import { Link } from "gatsby";
+import { Transition } from "react-spring/renderprops";
 import styled from "styled-components";
 
 import BuyMeACoffee from "../components/BuyMeACoffee";
 import Quote from "../components/Quote";
-import Bio from "../components/bio";
+import Bio from "../components/Bio";
 import Button from "../components/Button";
 import Name from "../components/Name";
 import Icons from "../components/Icons";
@@ -46,16 +46,15 @@ class Homepage extends React.Component {
     const name = this.createObject("name", <Name />);
     const bio = this.createObject("bio", <Bio margin={0.25} />);
     const quote = this.createObject("quote", <Quote />);
-    // const work = this.createObject('work', <Button>My work</Button>);
     const blog = this.createObject(
       "blog",
-      <Link to="/blog" style={{ textDecoration: "none", color: black }} >
+      <Link to="/blog" style={{ textDecoration: "none", color: black }}>
         <Button>Blog</Button>
       </Link>
     );
 
-    const offset = 250;
-    const interval = 500;
+    const offset = 200;
+    const interval = 400;
 
     const items = [blog, quote, bio, name];
 
@@ -72,47 +71,33 @@ class Homepage extends React.Component {
 
     return (
       <Content>
-          <SEO
-            title="Landing"
-            keywords={[
-              `portfolio`,
-              `frontend`,
-              `designer`,
-              `ux`,
-              "ui",
-              "builder",
-              "raptis",
-              "dimitris",
-            ]}
-          />
-      {/* <canvas id="my-canvas">
-      </canvas> */}
-          <Transition
-            items={items}
-            keys={(item) => item.key}
-            from={{ transform: "translate3d(-1000px, 0,0)" }}
-            enter={{ transform: "translate3d(0,0px,0)" }}
-            leave={{ transform: "translate3d(0,-1000px,0)" }}
-          >
-            {(item) => (props) => <div style={props}>{item.content}</div>}
-          </Transition>
-          <Icons />
-          <BuyMeACoffee />
-        </Content>
+        <SEO
+          title="Home"
+          keywords={[
+            `portfolio`,
+            `frontend`,
+            `designer`,
+            `ux`,
+            "ui",
+            "builder",
+            "raptis",
+            "dimitris",
+          ]}
+        />
+        <Transition
+          items={items}
+          keys={(item) => item.key}
+          from={{ transform: "translate3d(-1000px, 0,0)" }}
+          enter={{ transform: "translate3d(0,0px,0)" }}
+          leave={{ transform: "translate3d(0,-1000px,0)" }}
+        >
+          {(item) => (props) => <div style={props}>{item.content}</div>}
+        </Transition>
+        <Icons />
+        <BuyMeACoffee />
+      </Content>
     );
   }
 }
 
 export default Homepage;
-
-export const query = graphql`
-  query {
-    me: file(relativePath: { eq: "new-me.png" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`;

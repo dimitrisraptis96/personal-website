@@ -4,7 +4,7 @@ import CustomLink from "../components/CustomLink";
 import Underline from "../components/Underline"
 
 import {rgba} from "polished"
-import Bio from "../components/bio"
+import Bio from "../components/Bio"
 import Layout from "../components/BlogLayout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
