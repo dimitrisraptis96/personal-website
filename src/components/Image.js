@@ -1,16 +1,13 @@
-import Img from 'gatsby-image';
-import styled from 'styled-components';
+import Img from "gatsby-image";
+import styled from "styled-components";
 
-import {
-  radius,
-  shadow,
-} from '../utils/styles';
- 
+import { radius, shadow } from "../utils/styles";
+
 const Image = styled(Img)`
   box-shadow: ${shadow};
   border-radius: ${radius};
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 75px;
+  max-height: 75px;
   margin-right: 1.5em;
 `;
 

@@ -1,44 +1,57 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import { rgba } from 'polished';
+
+import styled from "styled-components";
+import { rgba } from "polished";
 
 import Image from "./Image";
 
 import { rhythm } from "../utils/typography";
-import { gray } from '../utils/colors';
+import { gray } from "../utils/colors";
 
-const Bio = ({margin}) => {
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin: 2rem 0;
+`;
+
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
+
+const Bio = ({ margin }) => {
   return (
     <StaticQuery
       query={bioQuery}
       render={(data) => {
         const { author } = data.site.siteMetadata;
         return (
-          <div
-            style={{
-              display: `flex`,
-              marginTop: rhythm(margin),
-              marginBottom: rhythm(margin),
-            }}
-          >
+          <Container>
             <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
-            <p>
-              Crafting clean and user-friendly things since 1996.
-              <br />
-              <sup style={{color: rgba(gray, .8)}}>Frontend engineer @loceye.io</sup>
-            </p>
-          </div>
+            <Column>
+              <p>Crafting clean and user-friendly things since 1996.</p>
+              <sup style={{ color: rgba(gray, 0.8) }}>
+                Frontend engineer @loceye.io
+              </sup>
+            </Column>
+          </Container>
         );
       }}
     />
   );
-}
+};
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/new-me.png/" }) {
+    avatar: file(absolutePath: { regex: "/me.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }
