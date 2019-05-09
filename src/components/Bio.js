@@ -6,13 +6,12 @@ import { rgba } from "polished";
 
 import Image from "./Image";
 
-import { rhythm } from "../utils/typography";
 import { gray } from "../utils/colors";
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   margin: 2rem 0;
