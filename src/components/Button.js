@@ -9,7 +9,7 @@ import {
 import {
   radius,
   shadow,
-} from '../utils/styles';
+} from '../utils/theme';
 
 const PADDING = '1em';
 
