@@ -8,7 +8,7 @@ import { rhythm, scale } from "../utils/typography";
 import { green, gray } from "../utils/colors";
 import { rgba } from "polished";
 import styled from "styled-components";
-import Snakke from 'react-snakke'
+import Snakke from "react-snakke";
 
 const Div = styled.div`
   img {
@@ -19,10 +19,18 @@ const Div = styled.div`
     text-align: center;
   }
   blockquote {
+    quotes: "“" "”" "“" "”";
+
     color: ${rgba(green, 0.8)};
     font-style: italic;
     /* font-family: "Abril Fatface"; */
     margin: 2rem;
+
+    & > * {
+      line-height: 1.7;
+      margin: 0;
+      font-weight: normal;
+    }
   }
   blockquote:before {
     color: ${green};
@@ -31,6 +39,14 @@ const Div = styled.div`
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
+  }
+  blockquote:after {
+    content: open-quote;
+    opacity: 0;
+    font-size: 4em;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+    margin-left: calc(100% - 2rem);
   }
 `;
 
@@ -45,14 +61,13 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <Snakke color={green} height="5px" opacity=".8" zIndex="10" />
 
-
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
             display: `block`,
             marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginTop: rhythm(-1)
           }}
         >
           {post.frontmatter.date}
@@ -60,7 +75,7 @@ class BlogPostTemplate extends React.Component {
         <Div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
-            marginBottom: rhythm(1),
+            marginBottom: rhythm(1)
           }}
         />
         <Bio />
@@ -71,7 +86,7 @@ class BlogPostTemplate extends React.Component {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
+            padding: 0
           }}
         >
           <li>
