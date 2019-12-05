@@ -5,7 +5,7 @@ import styled from "styled-components";
 // import { FiX } from "react-icons/fi";
 import { GiCoffeeBeans } from "react-icons/gi";
 
-import { shadow } from "../utils/styles";
+import { shadow } from "../utils/theme";
 import { black } from "../utils/colors";
 
 const Badge = styled.div`
@@ -35,8 +35,8 @@ const Row = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: ${(props) => props.justify || "center"};
-  align-items: ${(props) => props.alignItems || "center"};
+  justify-content: ${props => props.justify || "center"};
+  align-items: ${props => props.alignItems || "center"};
 `;
 
 const Text = styled.p`
@@ -50,7 +50,7 @@ const BuyMeACoffee = () => {
   const { x } = useSpring({
     from: { x: 0 },
     x: state ? 1 : 0,
-    config: { duration: 1000 },
+    config: { duration: 1000 }
   });
 
   return (
@@ -60,22 +60,22 @@ const BuyMeACoffee = () => {
         zΙndex: "9999",
         top: "32px",
         right: "32px",
-        width: '100%',
+        width: "100%",
         opacity: x.interpolate({ output: [0.3, 1] }),
         transform: x
           .interpolate({
             range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
-            output: [1, 0.99, 0.95, 1.05, 0.95, 1.05, 1.01, 1],
+            output: [1, 0.99, 0.95, 1.05, 0.95, 1.05, 1.01, 1]
           })
-          .interpolate((x) => `scale(${x})`),
+          .interpolate(x => `scale(${x})`)
       }}
     >
-        <a href="https://www.paypal.me/DimitrisRaptis/2.99">
-      <Badge onClick={() => toggle(!state)}>
+      <a href="https://www.buymeacoffee.com/dmraptis">
+        <Badge onClick={() => toggle(!state)}>
           <GiCoffeeBeans color={"white"} size={16} />
           <Text>Buy me a coffee!</Text>
-      </Badge>
-        </a>
+        </Badge>
+      </a>
     </animated.div>
   );
 };
