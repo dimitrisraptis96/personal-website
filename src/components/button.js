@@ -1,70 +1,79 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+
 import { black, green } from "../utils/colors";
+import { radius, shadow } from "../utils/theme";
 
-const Button = styled.div`
-  color: ${black};
+const PADDING = "1em";
+
+const Wrapper = styled.a`
+  color: inherit;
+  padding: ${PADDING} 22px;
   position: relative;
-  padding: 1em 1.5em;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
-  font-size: 1em;
-  margin: 1em auto;
-  text-transform: capitalize;
-  font-weight: bold;
-  
-  :after,
+  text-decoration: none;
+  transition: all 0.2s ease;
   :before {
-    content: '';
-    display: block;
+    box-shadow: ${shadow};
+    content: "";
     position: absolute;
-    width: 20%;
-    height: 20%;
-    border: 2px solid;
-    transition: all 0.6s ease;
-    border-radius: 2px;
-  }
-
-  :after {
-    bottom: 0;
-    right: 0;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-bottom-color: ${black};
-    border-right-color: ${black};
-  }
-
-  :before {
     top: 0;
     left: 0;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-    border-top-color: ${black};
-    border-left-color: ${black};
+    display: block;
+    border-radius: ${radius};
+    background: ${green};
+    width: calc(23px + 2 * ${PADDING});
+    height: calc(23px + 2 * ${PADDING});
+    transition: all 0.3s ease;
+  }
+  > span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: capitalize;
+    vertical-align: middle;
+  }
+  > svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: ${black};
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  :hover {
+    :before {
+      width: 100%;
+      background: ${green};
+    }
+    svg {
+      transform: translateX(0);
+    }
   }
 
-  :hover,
-  :hover:after,
-  :hover:before {
-    color: ${green};
-    border-bottom-color: ${green};
-    border-right-color: ${green};
-    border-top-color: ${green};
-    border-left-color: ${green};
-    width: 10em;
-    height: 3.5em;
+  :active {
+    transform: scale(0.96);
   }
 `;
 
-Button.propTypes = {
-  type: PropTypes.string
-};
+const Button = props => {
+  const { prop } = props;
 
-Button.defaultProps = {
-  type: "primary"
+  return (
+    <Wrapper href="#">
+      <span>{props.children}</span>
+      <svg width="13px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </Wrapper>
+  );
 };
 
 export default Button;

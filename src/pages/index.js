@@ -34,12 +34,12 @@ const Content = styled.div`
 
 class Homepage extends React.Component {
   state = {
-    items: [],
+    items: []
   };
 
   createObject = (key, component) => ({
     key,
-    content: component,
+    content: component
   });
 
   async componentDidMount() {
@@ -81,17 +81,17 @@ class Homepage extends React.Component {
             "ui",
             "builder",
             "raptis",
-            "dimitris",
+            "dimitris"
           ]}
         />
         <Transition
           items={items}
-          keys={(item) => item.key}
+          keys={item => item.key}
           from={{ transform: "translate3d(-1000px, 0,0)" }}
           enter={{ transform: "translate3d(0,0px,0)" }}
           leave={{ transform: "translate3d(0,-1000px,0)" }}
         >
-          {(item) => (props) => <div style={props}>{item.content}</div>}
+          {item => props => <div style={props}>{item.content}</div>}
         </Transition>
         <Icons />
         <BuyMeACoffee />

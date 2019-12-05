@@ -5,7 +5,7 @@ import Header from "./Header";
 const Name = props => {
   return (
     <Header>
-      <Underline>Dimitris Raptis</Underline>
+      <Underline>Jim Raptis</Underline>
     </Header>
   );
 };

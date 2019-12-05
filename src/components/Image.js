@@ -1,7 +1,7 @@
 import Img from "gatsby-image";
 import styled from "styled-components";
 
-import { radius, shadow } from "../utils/styles";
+import { radius, shadow } from "../utils/theme";
 
 const Image = styled(Img)`
   box-shadow: ${shadow};

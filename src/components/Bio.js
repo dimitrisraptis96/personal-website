@@ -14,7 +14,7 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  margin: 2rem 0;
+  margin: 2rem 0 4rem 0;
 `;
 
 const Column = styled.div`
@@ -28,15 +28,18 @@ const Bio = ({ margin }) => {
   return (
     <StaticQuery
       query={bioQuery}
-      render={(data) => {
+      render={data => {
         const { author } = data.site.siteMetadata;
         return (
           <Container>
             <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
             <Column>
-              <p>Crafting clean and user-friendly things since 1996.</p>
+              <p>
+                Strive to craft usable, clean & accessible interfaces for
+                humans.
+              </p>
               <sup style={{ color: rgba(gray, 0.8) }}>
-                Frontend engineer @loceye.io
+                Designer | Engineer | Co-Founder at Loceye
               </sup>
             </Column>
           </Container>
