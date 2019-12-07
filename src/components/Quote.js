@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import Emoji from "react-emojione";
 
-import Paragraph from './Paragraph';
+import Paragraph from "./Paragraph";
 
-const Quote = (props) => (
+const Quote = props => (
   <Paragraph>
-    <Emoji>I design and build user interfaces 🤟 </Emoji>
+    <Emoji>I design and build user interfaces</Emoji>
   </Paragraph>
 );
 
