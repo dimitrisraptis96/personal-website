@@ -5,7 +5,10 @@ import Header from "./Header";
 const Name = props => {
   return (
     <Header>
-      <Underline>Jim Raptis</Underline>
+      <p>👋</p>
+      <div>
+        I'm <Underline>Jim Raptis</Underline>
+      </div>
     </Header>
   );
 };
