@@ -17,39 +17,11 @@ My name is Dimitris and I'm a **developer** or **designer**. My passion is desig
 
 &nbsp;
 
-## 🚀 Todo List
-- [x] Fix display name (SEO component and gatsby-config)
-- [x] Connect gatsby-blog-starter
-- [x] Try to add a CSS3 animated background 🌠
-- [x] Change cringe image of this README.md
-- [ ] Refactor and componentize code
-- [x] Add CTA link
-- [ ] Create *My work* page ASAP
-- [x] Take care of gatsbsy's Link styling
-- [x] Polish my 1rst blog post
-- [ ] Install fonts using gatsby plugin (see blog gatsby starter)
-- [x] Custom blog bio and footer
-- [ ] Add commenting plugin or link to twitter(!)
-- [x] Create BUY ME A COFFEE design
-- [ ] Add social media footer bar (optional)
-- [ ] Header for blog (not urgent)
-- [x] Back button for blog
-- [x] Fix Dribbble hover color
- 
-&nbsp;
+## 📜License
 
-## :page_with_curl: License
+Copyright (c) 2019-present Jim Raptis. All rights reserved.
 
-[MIT](https://en.wikipedia.org/wiki/MIT_License)
-
-&nbsp;
-
-## Font
-
-- [Bree Serif](https://fonts.google.com/specimen/Bree+Serif)
-- [Rufina](https://fonts.google.com/specimen/Rufina)
-- [Nunito](https://fonts.google.com/specimen/Nunito)
-- [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+**The code, design and idea in this repository are intellectual property of the individual mentioned above (unless otherwise stated) and as such CANNOT be copied, modified, sublicensed or redistributed without permission from the author.**
 
 
 <p align="center">
